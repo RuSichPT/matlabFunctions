@@ -1,2 +1,2 @@
-# Functions_matlab
+# matlabFunctions
 My all functions matlab
