@@ -39,7 +39,7 @@ function plotImpulseFrequencyResponses(numb_TX, numb_RX, H, sampleRate)
     h_freq = fft(h_time', N_FFT);
     figure();
     plot(freq, mag2db(fftshift(abs(h_freq))));
-    ylim([-40 20]);
+%     ylim([-40 20]);
     grid on;
     title("Frequency Response " + num2str(numb_TX)+"x"+num2str(numb_RX));
     ylabel('dBw');
