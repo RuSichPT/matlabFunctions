@@ -24,16 +24,16 @@ function plotImpulseFrequencyResponses1(numb_TX, numb_RX, H, sampleRate, delay)
     figure();
     stem(delay, abs_h);
     grid on;
-    title("Impulse Response " + num2str(numb_TX)+"x"+num2str(numb_RX));
+    title("Impulse Response " + num2str(numb_TX) + "x" + num2str(numb_RX));
     ylabel('Magnitude');
     xlabel('Delay (s)');
 
     % АЧХ
-    h_freq = fft(h_time', N_FFT);
+    h_freq = fft(h_time, N_FFT);
     figure();
     plot(freq, mag2db(fftshift(abs(h_freq))));
     grid on;
-    title("Frequency Response " + num2str(numb_TX)+"x"+num2str(numb_RX));
+    title("Frequency Response " + num2str(numb_TX) + "x" + num2str(numb_RX));
     ylabel('dBw');
     xlabel('Frequency (Hz)');
 end
